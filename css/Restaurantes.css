@@ -1,5 +1,5 @@
   /*se formatea todo*/
-* {
+  * {
     box-sizing: border-box;
     font-family: 'Segoe UI';
   }
@@ -165,4 +165,4 @@
     margin: 0px;
   }
   
-
+  

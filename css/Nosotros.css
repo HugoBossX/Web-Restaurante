@@ -1,5 +1,5 @@
-  /*se formatea todo*/
-  * {
+   /*se formatea todo*/
+   * {
     box-sizing: border-box;
     font-family: 'Segoe UI';
   }
@@ -47,7 +47,6 @@
     text-decoration:none;
     margin: 0 .75rem;
     width: 100px;
-    text-align:center;
   }
   
   /*formateo de los enlaces a*/
@@ -68,6 +67,13 @@
     color: blue;
   }
 
+  /*se adapta la imagen*/
+  header > img {
+    max-height:100%;
+    min-height:20%;
+    width:100%;
+  }
+
   /*se formatea el div.container*/
   .container {
     margin: 20px auto;
@@ -82,7 +88,7 @@
   .container main.articulos {
     display:grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-row-gap: 10px;
+    grid-row-gap: 10px;/*para vertical es row*/
   }
 
   /*se formatea los articles*/
@@ -132,35 +138,15 @@
   .container > footer > div.social {
     display:flex;
     justify-content: center;
-    background-color: black;
   }
 
   /*se formatea el button*/
   .container > footer > div.social > button {
     margin-left: 40%;
-    padding: 0px 20px;
-    background-color: #f30000; /* Color Rojo */
-    color: white;
-    border-radius: 5px;
-    font-weight: bold;
   }
-
-  /*se adapta la imagen*/
-  .container > footer > div.social > .iconos_vectoriales > img{
-    max-height:100%;
-    min-height:5%;
-    width:10%;
-  }  
 
   /*se formatea el div*/
   .container > footer > div.social > div {
     margin: 0px;
   }
-  
-
-
-  
-
- 
-  
   
