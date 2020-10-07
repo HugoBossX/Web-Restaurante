@@ -1,5 +1,5 @@
-  /*se formatea todo*/
-  * {
+/*se formatea todo*/
+* {
     box-sizing: border-box;
     font-family: 'Segoe UI';
   }
@@ -149,5 +149,11 @@
   .container > footer > div.social > div {
     margin: 0px;
   }
+  
+
+
+  
+
+ 
   
   
