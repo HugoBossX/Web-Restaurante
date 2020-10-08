@@ -15,24 +15,24 @@
     background-color: white;
   }
 
-  /*se crea una cuadricula con 3 columnas*/
-  /*[img][nav][div]*/
+  /*[img][nav][div] -> se crea una cuadricula con 3 columnas y 1 fila*/
   .nav_horizontal {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1, auto);
   }
 
-  /*formateo de la imagen*/
+  /*formateo de la imagen;top, right, bottom, left*/
   .nav_horizontal > img {
     text-align: left;
     height: 100%;
-    margin: -8px 0px 10px 0px; /*top, right, bottom, left*/
+    margin: -8px 0px 10px 0px; 
   }
 
-  /*formateo de la nav.menu*/
+  /*formateo de la nav.menu; top, right, bottom, left*/
   .nav_horizontal > nav.menu {
     border: #9c9c9c 1px solid;
-    margin: -8px 0px 10px 0px; /*top, right, bottom, left*/
+    margin: -8px 0px 10px 0px; 
   }
   
   /*[li][li][li][li][li][li] -> lista flexionada en horizontal centrado*/
@@ -81,14 +81,25 @@
     width: 90%;
     margin-bottom:10px;
     margin-top:10px;
+    /*[.articulos][footer] -> se crea una cuadricula con 1 columna y 2 filas*/
+    display:grid;
+    grid-gap:10px;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(2, auto);
+
+    grid-template-areas:"articulos"
+                        "footer";
   }
 
-  /*[article][article] -> se crea una cuadricula con 2 columnas*/
+  /*[article][article] -> se crea una cuadricula con 2 columnasy 3 filas*/
   /*[article][article]*/
   /*[article][article]*/
   .container main.articulos {
+    grid-area: articulos;
+
     display:grid;
     grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, auto);
     grid-row-gap: 10px;
   }
 
@@ -114,21 +125,21 @@
     text-align: justify;
   }
 
-  /*se formatea el footer repecto de div.container*/
-  .container > footer{
-    margin: 10px 0px 0px 0px;
+  .container > footer {
+    grid-area: footer;
   }
 
-  /*[article][article] -> se crea una cuadricula con 2 columnas*/
+  /*[article][article] -> se crea una cuadricula con 2 columnas y 1 fila*/
   .container > footer > div.info {
     display:grid;
     grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, auto);
   }
 
-  /*se formatea el article*/
+  /*se formatea el article;top, right, bottom, left*/
   .container > footer > div.info > article {
     border: black 1px solid;
-    margin: 0px 0px 10px 0px; /*top, right, bottom, left*/
+    margin: 0px 0px 10px 0px;
   }
 
   /*Se formatea el h2*/
@@ -162,7 +173,7 @@
 
   /*se formatea el div*/
   .container > footer > div.social > div {
-    margin: 0px;
+    /*nada por aqui...*/
   }
   
 
