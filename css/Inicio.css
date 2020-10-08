@@ -17,36 +17,34 @@
 
   /*[img][nav][div] -> se crea una cuadricula con 3 columnas y 1 fila*/
   .nav_horizontal {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(1, auto);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 10px;
   }
 
-  /*formateo de la imagen;top, right, bottom, left*/
   .nav_horizontal > img {
-    text-align: left;
-    height: 100%;
-    margin: -8px 0px 10px 0px; 
+    height: 55px;
   }
 
   /*formateo de la nav.menu; top, right, bottom, left*/
   .nav_horizontal > nav.menu {
     border: #9c9c9c 1px solid;
-    margin: -8px 0px 10px 0px; 
   }
   
   /*[li][li][li][li][li][li] -> lista flexionada en horizontal centrado*/
   .nav_horizontal > nav.menu > ul {
     display: flex;
     justify-content: center;
-    list-style:none;
+    list-style-type:none;
+    padding: 0;
   }
 
   /*formateo de los elementos de la lista*/
   .nav_horizontal > nav.menu > ul > li {
     text-decoration:none;
-    margin: 0 .75rem;
-    width: 100px;
+    margin: 0,90rem;
+    width: 120px;
     text-align:center;
   }
   
@@ -171,10 +169,67 @@
     width:10%;
   }
 
-  /*se formatea el div*/
-  .container > footer > div.social > div {
-    /*nada por aqui...*/
+  /*para tabletas*/
+  @media screen and (max-width: 768px) {
+    .nav_horizontal {
+      display:grid;
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: repeat(2, auto);
+    }
+
+    .nav_horizontal > img {
+      justify-self: center;
+    }
   }
+
+  /*para móviles*/
+  @media screen and (max-width: 576px) {
+    .nav_horizontal {
+      display:grid;
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: repeat(2, auto);
+    }
+
+    .nav_horizontal > img {
+      justify-self: center;
+    }
+
+     /*formateo de la nav.menu; top, right, bottom, left*/
+    .nav_horizontal > nav.menu {
+      border: none;
+    }
+
+    /*[li][li][li][li][li][li] -> lista flexionada en horizontal centrado*/
+    .nav_horizontal > nav.menu > ul {
+      display:grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, auto);
+      grid-row-gap: 10px;
+      grid-column: 10px;
+      justify-items: center;
+    }
+
+    /*formateo de los elementos de la lista*/
+    .nav_horizontal > nav.menu > ul > li {
+      border: #9c9c9c 1px solid;
+    }
+    /*formateo de los elementos de la lista*/
+    .nav_horizontal > nav.menu > ul > li > img.pedido {
+      width:120px;    
+      height:120px;
+      background: url("../recursos/logo.svg");
+    }
+
+      /*se adapta la imagen*/
+    .container main.articulos > article > img {
+      width: 100%;
+      max-width: 400px;
+      height: auto;
+    }
+  }
+
+
+
   
 
  
