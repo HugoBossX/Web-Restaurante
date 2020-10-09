@@ -1,232 +1,218 @@
-  /*se formatea todo*/
 * {
-    box-sizing: border-box;
-    font-family: 'Segoe UI';
-  }
-  
-  /*se formatea la etiqueta h2 y p*/
-  h2,
-  p {
-    margin: 2%;
-  }
-  
-  /*se formatea el body*/
-  body {
-    background-color: white;
-  }
+  box-sizing: border-box;
+  font-family: 'Segoe UI';
+}
 
-  /*[img][nav][div] -> se crea una cuadricula con 3 columnas y 1 fila*/
+h2,
+p {
+  margin: 2%;
+}
+
+body {
+  background-color: white;
+}
+
+/*[img][nav] -> lista flexionada horizontalmente centrado*/
+.nav_horizontal {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+
+.nav_horizontal > img {
+  height: 55px;
+}
+
+
+.nav_horizontal > nav.menu {
+  border: #9c9c9c 1px solid;
+}
+
+/*[li][li][li][li][li][li] -> lista flexionada horizontalmente centrado*/
+.nav_horizontal > nav.menu > ul {
+  display: flex;
+  justify-content: center;
+  list-style-type:none;
+  padding: 0;
+}
+
+.nav_horizontal > nav.menu > ul > li {
+  text-decoration:none;
+  margin: 0,90rem;
+  width: 120px;
+  text-align:center;
+}
+
+.nav_horizontal > nav.menu > ul > li > a {
+  color: #9c9c9c;
+  text-decoration:none;
+  font-weight: bold;
+}
+
+.nav_horizontal > nav.menu > ul > li > a:hover{
+  color: #FF0000;
+  text-decoration: underline #FF0000;
+}
+
+.nav_horizontal > nav.menu > ul > li > a:active{
+  color: blue;
+}
+
+/*se adapta la imagen*/
+header > img {
+  max-height:100%;
+  min-height:20%;
+  width:100%;
+}
+
+.container {
+  margin: 20px auto;
+  width: 90%;
+  margin-bottom:10px;
+  margin-top:10px;
+  /*[.articulos][footer] -> se crea una cuadricula con 1 columna y 2 filas*/
+  display:grid;
+  grid-gap:10px;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(2, auto);
+
+  grid-template-areas:"articulos"
+                      "footer";
+}
+
+/*[article][article] -> se crea una cuadricula con 2 columnasy 3 filas*/
+/*[article][article]*/
+/*[article][article]*/
+.container main.articulos {
+  grid-area: articulos;
+
+  display:grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, auto);
+  grid-row-gap: 10px;
+}
+
+.container main.articulos > article {
+  border: black 1px solid;
+}
+
+.container main.articulos > article > img {
+  max-height:100%;
+  min-height:20%;
+  width:100%;
+}
+
+.container main.articulos > article > h2 {
+  text-align: center;
+}
+
+.container main.articulos > article > p {
+  text-align: justify;
+}
+
+.container > footer {
+  grid-area: footer;
+}
+
+/*[article][article] -> se crea una cuadricula con 2 columnas y 1 fila*/
+.container > footer > div.info {
+  display:grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(1, auto);
+}
+
+.container > footer > div.info > article {
+  border: black 1px solid;
+  margin: 0px 0px 10px 0px;
+}
+
+footer > div.info > article > h2 {
+  text-align: center;
+}
+
+/*[div][button] -> lista flexionada en horizontal centrado*/
+.container > footer > div.social {
+  display:flex;
+  justify-content: center;
+  background-color: black;
+}
+
+.container > footer > div.social > button {
+  margin-left: 40%;
+  padding: 0px 20px;
+  background-color: #f30000;
+  color: white;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.container > footer > div.social > .iconos_vectoriales > img{
+  max-height:100%;
+  min-height:5%;
+  width:10%;
+}
+
+/*para tabletas*/
+@media screen and (max-width: 768px) {
   .nav_horizontal {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 10px;
+    display:grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(2, auto);
   }
 
   .nav_horizontal > img {
-    height: 55px;
+    justify-self: center;
   }
+}
 
-  /*formateo de la nav.menu; top, right, bottom, left*/
-  .nav_horizontal > nav.menu {
-    border: #9c9c9c 1px solid;
-  }
-  
-  /*[li][li][li][li][li][li] -> lista flexionada en horizontal centrado*/
-  .nav_horizontal > nav.menu > ul {
-    display: flex;
-    justify-content: center;
-    list-style-type:none;
-    padding: 0;
-  }
-
-  /*formateo de los elementos de la lista*/
-  .nav_horizontal > nav.menu > ul > li {
-    text-decoration:none;
-    margin: 0,90rem;
-    width: 120px;
-    text-align:center;
-  }
-  
-  /*formateo de los enlaces a*/
-  .nav_horizontal > nav.menu > ul > li > a {
-    color: #9c9c9c;
-    text-decoration:none;
-    font-weight: bold;
-  }
-
-   /*formateo de los enlaces a con hover*/
-   .nav_horizontal > nav.menu > ul > li > a:hover{
-    color: #FF0000;
-    text-decoration: underline #FF0000;
-  }
-
-  /*formateo de los enlaces a con active*/
-  .nav_horizontal > nav.menu > ul > li > a:active{
-    color: blue;
-  }
-
-  /*se adapta la imagen*/
-  header > img {
-    max-height:100%;
-    min-height:20%;
-    width:100%;
-  }
-
-  /*se formatea el div.container*/
-  .container {
-    margin: 20px auto;
-    width: 90%;
-    margin-bottom:10px;
-    margin-top:10px;
-    /*[.articulos][footer] -> se crea una cuadricula con 1 columna y 2 filas*/
+/*para móviles*/
+@media screen and (max-width: 576px) {
+  /*[img] -> se crea una cuadricula con 1 columna y 2 filas*/
+  /*[nav]*/
+  .nav_horizontal {
     display:grid;
-    grid-gap:10px;
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(2, auto);
-
-    grid-template-areas:"articulos"
-                        "footer";
   }
 
-  /*[article][article] -> se crea una cuadricula con 2 columnasy 3 filas*/
-  /*[article][article]*/
-  /*[article][article]*/
-  .container main.articulos {
-    grid-area: articulos;
+  .nav_horizontal > img {
+    justify-self: center;
+  }
 
+  .nav_horizontal > nav.menu {
+    border: none;
+  }
+
+  /*[li][li] -> se crea una cuadricula con 2 columnas y 3 filas*/
+  /*[li][li]*/
+  /*[li][li]*/
+  .nav_horizontal > nav.menu > ul {
     display:grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, auto);
     grid-row-gap: 10px;
+    grid-column: 10px;
+    justify-items: center;
   }
 
-  /*se formatea los articles*/
-  .container main.articulos > article {
-    border: black 1px solid;
+  .nav_horizontal > nav.menu > ul > li {
+    border: #9c9c9c 1px solid;
+  }
+  
+  .nav_horizontal > nav.menu > ul > li > img.pedido {
+    width:120px;    
+    height:120px;
+    background: url("../recursos/logo.svg");
   }
 
   /*se adapta la imagen*/
   .container main.articulos > article > img {
-    max-height:100%;
-    min-height:20%;
-    width:100%;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
   }
-
-  /*se formatea el h2*/
-  .container main.articulos > article > h2 {
-    text-align: center;
-  }
-
-  /*se formatea la p*/
-  .container main.articulos > article > p {
-    text-align: justify;
-  }
-
-  .container > footer {
-    grid-area: footer;
-  }
-
-  /*[article][article] -> se crea una cuadricula con 2 columnas y 1 fila*/
-  .container > footer > div.info {
-    display:grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(1, auto);
-  }
-
-  /*se formatea el article;top, right, bottom, left*/
-  .container > footer > div.info > article {
-    border: black 1px solid;
-    margin: 0px 0px 10px 0px;
-  }
-
-  /*Se formatea el h2*/
-  footer > div.info > article > h2 {
-    text-align: center;
-  }
-
-  /*[div][button] -> lista flexionada en horizontal centrado*/
-  .container > footer > div.social {
-    display:flex;
-    justify-content: center;
-    background-color: black;
-  }
-
-  /*se formatea el button*/
-  .container > footer > div.social > button {
-    margin-left: 40%;
-    padding: 0px 20px;
-    background-color: #f30000; /* Color Rojo */
-    color: white;
-    border-radius: 5px;
-    font-weight: bold;
-  }
-
-  /*se adapta la imagen*/
-  .container > footer > div.social > .iconos_vectoriales > img{
-    max-height:100%;
-    min-height:5%;
-    width:10%;
-  }
-
-  /*para tabletas*/
-  @media screen and (max-width: 768px) {
-    .nav_horizontal {
-      display:grid;
-      grid-template-columns: repeat(1, 1fr);
-      grid-template-rows: repeat(2, auto);
-    }
-
-    .nav_horizontal > img {
-      justify-self: center;
-    }
-  }
-
-  /*para móviles*/
-  @media screen and (max-width: 576px) {
-    .nav_horizontal {
-      display:grid;
-      grid-template-columns: repeat(1, 1fr);
-      grid-template-rows: repeat(2, auto);
-    }
-
-    .nav_horizontal > img {
-      justify-self: center;
-    }
-
-     /*formateo de la nav.menu; top, right, bottom, left*/
-    .nav_horizontal > nav.menu {
-      border: none;
-    }
-
-    /*[li][li][li][li][li][li] -> lista flexionada en horizontal centrado*/
-    .nav_horizontal > nav.menu > ul {
-      display:grid;
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: repeat(3, auto);
-      grid-row-gap: 10px;
-      grid-column: 10px;
-      justify-items: center;
-    }
-
-    /*formateo de los elementos de la lista*/
-    .nav_horizontal > nav.menu > ul > li {
-      border: #9c9c9c 1px solid;
-    }
-    /*formateo de los elementos de la lista*/
-    .nav_horizontal > nav.menu > ul > li > img.pedido {
-      width:120px;    
-      height:120px;
-      background: url("../recursos/logo.svg");
-    }
-
-      /*se adapta la imagen*/
-    .container main.articulos > article > img {
-      width: 100%;
-      max-width: 400px;
-      height: auto;
-    }
-  }
+}
 
 
 
