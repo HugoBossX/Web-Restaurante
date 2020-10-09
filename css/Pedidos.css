@@ -47,7 +47,6 @@
     text-decoration:none;
     margin: 0 .75rem;
     width: 100px;
-    text-align:center;
   }
   
   /*formateo de los enlaces a*/
@@ -89,7 +88,7 @@
   .container main.articulos {
     display:grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-row-gap: 10px;
+    grid-row-gap: 10px;/*para vertical es row*/
   }
 
   /*se formatea los articles*/
@@ -114,7 +113,6 @@
     text-align: justify;
   }
 
-  /*se formatea el footer repecto de div.container*/
   .container > footer{
     margin: 10px 0px 0px 0px;
   }
@@ -140,28 +138,71 @@
   .container > footer > div.social {
     display:flex;
     justify-content: center;
-    background-color: black;
   }
 
   /*se formatea el button*/
   .container > footer > div.social > button {
     margin-left: 40%;
-    padding: 0px 20px;
-    background-color: #f30000; /* Color Rojo */
-    color: white;
-    border-radius: 5px;
-    font-weight: bold;
-  }
-
-  /*se adapta la imagen*/
-  .container > footer > div.social > .iconos_vectoriales > img{
-    max-height:100%;
-    min-height:5%;
-    width:10%;
   }
 
   /*se formatea el div*/
   .container > footer > div.social > div {
     margin: 0px;
   }
-  
+
+
+  /*formulario de datos pedido*/
+
+  *{box-sizing:border-box;}
+
+form{
+	width:300px;
+	padding:16px;
+	border-radius:10px;
+	margin:auto;
+	background-color:#ccc;
+}
+
+form label{
+	width:72px;
+	font-weight:bold;
+	display:inline-block;
+}
+
+form input[type="text"],
+form input[type="email"]{
+	width:180px;
+	padding:3px 10px;
+	border:1px solid #f6f6f6;
+	border-radius:3px;
+	background-color:#f6f6f6;
+	margin:8px 0;
+	display:inline-block;
+}
+
+form input[type="submit"]{
+	width:100%;
+	padding:8px 16px;
+	margin-top:32px;
+	border:1px solid #000;
+	border-radius:5px;
+	display:block;
+	color:#fff;
+	background-color:#000;
+} 
+
+form input[type="submit"]:hover{
+	cursor:pointer;
+}
+
+textarea{
+	width:100%;
+	height:100px;
+	border:1px solid #f6f6f6;
+	border-radius:3px;
+	background-color:#f6f6f6;			
+	margin:8px 0;
+	/*resize: vertical | horizontal | none | both*/
+	resize:none;
+	display:block;
+}

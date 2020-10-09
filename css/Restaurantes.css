@@ -47,7 +47,6 @@
     text-decoration:none;
     margin: 0 .75rem;
     width: 100px;
-    text-align:center;
   }
   
   /*formateo de los enlaces a*/
@@ -89,7 +88,7 @@
   .container main.articulos {
     display:grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-row-gap: 10px;
+    grid-row-gap: 10px;/*para vertical es row*/
   }
 
   /*se formatea los articles*/
@@ -114,7 +113,6 @@
     text-align: justify;
   }
 
-  /*se formatea el footer repecto de div.container*/
   .container > footer{
     margin: 10px 0px 0px 0px;
   }
@@ -146,18 +144,6 @@
   /*se formatea el button*/
   .container > footer > div.social > button {
     margin-left: 40%;
-    padding: 0px 20px;
-    background-color: #f30000; /* Color Rojo */
-    color: white;
-    border-radius: 5px;
-    font-weight: bold;
-  }
-
-  /*se adapta la imagen*/
-  .container > footer > div.social > .iconos_vectoriales > img{
-    max-height:100%;
-    min-height:5%;
-    width:10%;
   }
 
   /*se formatea el div*/

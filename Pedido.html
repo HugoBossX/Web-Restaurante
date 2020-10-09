@@ -22,50 +22,69 @@
 		</nav>
 		<div></div>
 	</div>
-
-	<header>
-		<img src="recursos/header.png" alt="Cabecera">
-	</header>
 	<h2>Pedidos</h2>
-
+	</br>
 
 	<div class="dropdown">
-		<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-		  Dropdown button
-		</button>
+		<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Dropdown button</button>
 		<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
 		  <a class="dropdown-item" value="1">Pizza</a>
-		  <a class="dropdown-item" id="2">Pasta</a>
-		  <a class="dropdown-item" >Esnaladas</a>
-		  <a class="dropdown-item" href="#">Bebidas</a>
-		  <a class="dropdown-item" href="#">Postres</a>
+		  <a class="dropdown-item" value="2">Pasta</a>
+		  <a class="dropdown-item"  value="3">Esnaladas</a>
+		  <a class="dropdown-item"  value="4">Bebidas</a>
+		  <a class="dropdown-item"  value="5">Postres</a>
 		</div>
-	  </div>
+	</div>
 
-	  <div class="btn-group dropup">
-		<button type="button" class="btn btn-secondary">
-		  Split dropup
-		</button>
-		<button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-		  <span class="sr-only">Toggle Dropdown</span>
-		</button>
+	<div class="btn-group dropup">
+		<button type="button" class="btn btn-secondary"> Split dropup</button>
+		<button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="sr-only">Toggle Dropdown</span></button>
 		<div class="dropdown-menu">
 		  <!-- Dropdown menu links -->
 		</div>
-	  </div>
+	</div>
+
+
+
+	<form action="Pedido.html" target="" method="get" name="form-pedido">>
+		<center><h4>Datos del envio</h4></center>
+	</br>
+		<div class="form-group form-group-margin">
+			<label>Nombre</label>
+			<input type="text" name="name" id="name" placeholder="Introduce tu Nombre">
+		</div>
+
+		<div class="form-group form-group-margin">
+			<label>Dirección</label>
+			<input type="text" name="direccion" id="direccion"placeholder="Introduce la dirección">
+		</div>
+
+		<div class="form-group form-group-margin">
+			<label>Portal</label>
+			<input type="number" name="portal" id="portal" placeholder="Introduce el nº del portal">
+		</div>
+
+		<div class="form-group form-group-margin">
+			<label>Puerta</label>
+			<input type="text" name="puerta" id="puerta" placeholder="Introduce el nº de puerta">
+		</div>
+
+		<div class="no-mobile-padding-lr">
+			<button id="submit-form-button" class="btn btn-sm btn-success center margin-bottom-15 no-border" type="submit"> Hacer pedido</button>
+		</div>
+	</section>
 
 	<div class="container">
 		<main class="articulos">
 		</main>
 	<footer>
-		<div class="info"><article></article><article></article></div>
-	<div class="social">
+		<div class="social">
         <div class="iconos_vectoriales">
-			<a href="https://www.facebook.com/TerraNostraPizzeria/"> <img src="recursos/facebook.png" /></a>
-			<a href="https://www.instagram.com/terranostra_logrono/"><img src="recursos/instagram.png" /></a>
-        </div>
+			<a href="https://www.facebook.com/TerraNostraPizzeria/"> <img src="recursos/facebook.png"width="50" height="50" /></a>
+			<a href="https://www.instagram.com/terranostra_logrono/"><img src="recursos/instagram.png" width="50" height="50"/></a>
+		</div>
         <button>941213822</button>
-	</div>
+		</div>
 	</footer>
 </div>
 </body>
