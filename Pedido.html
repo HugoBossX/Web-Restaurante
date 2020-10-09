@@ -12,41 +12,42 @@
 		<img src="recursos/Enmascarar_grupo_1.png" alt="Logotipo">
 		<nav class="menu">
 			<ul>
-				<li><a href="Inicio.html">Inicio</a></li>
-				<li><a href="Carta.html">Carta</a></li>
-				<li><a href="Restaurantes.html">Restaurantes</a></li>
-				<li><a href="Pedido.html">Pedidos</a></li>
-				<li><a href="Nosotros.html">Nosotros</a></li>
-				<li><a href="Reseña.html">Reseñas</a></li>
+				<li><img class="pedido"/><a href="Inicio.html">Inicio</a></li>
+				<li><img class="pedido"/><a href="Carta.html">Carta</a></li>
+				<li><img class="pedido"/><a href="Restaurantes.html">Restaurantes</a></li>
+				<li><img class="pedido"/><a href="Pedido.html">Pedidos</a></li>
+				<li><img class="pedido"/><a href="Nosotros.html">Nosotros</a></li>
+				<li><img class="pedido"/><a href="Reseña.html">Reseñas</a></li>
 			</ul>
 		</nav>
-		<div></div>
 	</div>
 	<h2>Pedidos</h2>
 	</br>
 
-	<div class="dropdown">
-		<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Dropdown button</button>
-		<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-		  <a class="dropdown-item" value="1">Pizza</a>
-		  <a class="dropdown-item" value="2">Pasta</a>
-		  <a class="dropdown-item"  value="3">Esnaladas</a>
-		  <a class="dropdown-item"  value="4">Bebidas</a>
-		  <a class="dropdown-item"  value="5">Postres</a>
-		</div>
-	</div>
-
-	<div class="btn-group dropup">
-		<button type="button" class="btn btn-secondary"> Split dropup</button>
-		<button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="sr-only">Toggle Dropdown</span></button>
-		<div class="dropdown-menu">
-		  <!-- Dropdown menu links -->
-		</div>
-	</div>
+	<button> <a href="InicioSesion.html">Inicio de Sesión</a></button>
+	<button> <a href="Registro.html">Registro</a></button>
 
 
+</br></br></br></br>
 
-	<form action="Pedido.html" target="" method="get" name="form-pedido">>
+<div class="nav_QueApetece">
+	<nav class="QueApetece">
+		<ul>
+			<li><img class="pedido"/><a href="Pedido.html">Pizza</a></li>
+			<li><img class="pedido"/><a href="Pedido.html">Pasta</a></li>
+			<li><img class="pedido"/><a href="Pedido.html">Hamburgesa</a></li>
+			<li><img class="pedido"/><a href="Pedido.html">Ensalada</a></li>
+			<li><img class="pedido"/><a href="Pedido.html">Postre</a></li>
+			<li><img class="pedido"/><a href="Pedido.html">Bebida</a></li>
+		</ul>
+	</nav>
+</div>
+
+
+
+
+
+	<form action="Pedido.html" target="" method="get" name="form-pedido">
 		<center><h4>Datos del envio</h4></center>
 	</br>
 		<div class="form-group form-group-margin">
@@ -68,19 +69,27 @@
 			<label>Puerta</label>
 			<input type="text" name="puerta" id="puerta" placeholder="Introduce el nº de puerta">
 		</div>
-
+		</br>
+			<label for="male">a Domicilio</label> <input type="radio" id="domicilio" value="domicilio">
+		</br>
+			<label for="female">En el Restaurante</label>  <input type="radio" id="restaurante" value="restaurante">
+		</br>
+		
 		<div class="no-mobile-padding-lr">
-			<button id="submit-form-button" class="btn btn-sm btn-success center margin-bottom-15 no-border" type="submit"> Hacer pedido</button>
+			<center><button  class="botons" id="submit-form-button" class="btn btn-sm btn-success center margin-bottom-15 no-border" type="submit"> Hacer pedido</button></center>
 		</div>
 	</section>
-
+</form>
+<br>
+<br>
+<br>
 	<div class="container">
 		<main class="articulos">
 		</main>
 	<footer>
 		<div class="social">
         <div class="iconos_vectoriales">
-			<a href="https://www.facebook.com/TerraNostraPizzeria/"> <img src="recursos/facebook.png"width="50" height="50" /></a>
+			<a href="https://www.facebook.com/TerraNostraPizzeria/"> <img src="recursos/facebook.png" width="50" height="50" /></a>
 			<a href="https://www.instagram.com/terranostra_logrono/"><img src="recursos/instagram.png" width="50" height="50"/></a>
 		</div>
         <button>941213822</button>

@@ -1,71 +1,107 @@
-  /*se formatea todo*/
   * {
     box-sizing: border-box;
     font-family: 'Segoe UI';
   }
   
-  /*se formatea la etiqueta h2 y p*/
   h2,
   p {
     margin: 2%;
   }
   
-  /*se formatea el body*/
   body {
     background-color: white;
   }
 
-  /*se crea una cuadricula con 3 columnas*/
-  /*[img][nav][div]*/
-  .nav_horizontal {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-  }
 
-  /*formateo de la imagen*/
-  .nav_horizontal > img {
-    text-align: left;
-    height: 100%;
-    margin: -8px 0px 10px 0px; /*top, right, bottom, left*/
-  }
+  /*MENU DE LA BARRA*/
+/*[img][nav][div] -> se crea una cuadricula con 3 columnas y 1 fila*/
+.nav_horizontal {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
 
-  /*formateo de la nav.menu*/
-  .nav_horizontal > nav.menu {
-    border: #9c9c9c 1px solid;
-    margin: -8px 0px 10px 0px; /*top, right, bottom, left*/
-  }
-  
-  /*[li][li][li][li][li][li] -> lista flexionada en horizontal centrado*/
-  .nav_horizontal > nav.menu > ul {
-    display: flex;
-    justify-content: center;
-    list-style:none;
-  }
+.nav_horizontal > img {
+  height: 55px;
+}
 
-  /*formateo de los elementos de la lista*/
-  .nav_horizontal > nav.menu > ul > li {
-    text-decoration:none;
-    margin: 0 .75rem;
-    width: 100px;
-  }
-  
-  /*formateo de los enlaces a*/
-  .nav_horizontal > nav.menu > ul > li > a {
-    color: #9c9c9c;
-    text-decoration:none;
-    font-weight: bold;
-  }
+/*formateo de la nav.menu; top, right, bottom, left*/
+.nav_horizontal > nav.menu {
+  border: #9c9c9c 1px solid;
+}
 
-   /*formateo de los enlaces a con hover*/
-   .nav_horizontal > nav.menu > ul > li > a:hover{
-    color: #FF0000;
-    text-decoration: underline #FF0000;
-  }
+/*[li][li][li][li][li][li] -> lista flexionada en horizontal centrado*/
+.nav_horizontal > nav.menu > ul {
+  display: flex;
+  justify-content: center;
+  list-style-type:none;
+  padding: 0;
+}
 
-  /*formateo de los enlaces a con active*/
-  .nav_horizontal > nav.menu > ul > li > a:active{
-    color: blue;
-  }
+/*formateo de los elementos de la lista*/
+.nav_horizontal > nav.menu > ul > li {
+  text-decoration:none;
+  margin: 0,90rem;
+  width: 120px;
+  text-align:center;
+}
+
+/*formateo de los enlaces a*/
+.nav_horizontal > nav.menu > ul > li > a {
+  color: #9c9c9c;
+  text-decoration:none;
+  font-weight: bold;
+}
+
+ /*formateo de los enlaces a con hover*/
+ .nav_horizontal > nav.menu > ul > li > a:hover{
+  color: #FF0000;
+  text-decoration: underline #FF0000;
+}
+
+/*formateo de los enlaces a con active*/
+.nav_horizontal > nav.menu > ul > li > a:active{
+  color: blue;
+}
+
+
+
+/*menu    QUE TE APETECE*/
+.nav_QueApetece > nav.QueApetece {
+  border: #9c9c9c 1px solid;
+}
+
+.nav_QueApetece > nav.QueApetece > ul {
+  display: flex;
+  justify-content: center;
+  list-style-type:none;
+  padding: 0;
+}
+
+.nav_QueApetece > nav.QueApetece > ul > li {
+  text-decoration:none;
+  margin: 0,90rem;
+  width: 120px;
+  text-align:center;
+}
+
+.nav_QueApetece > nav.QueApetece > ul > li > a {
+  color: #9c9c9c;
+  text-decoration:none;
+  font-weight: bold;
+}
+
+.nav_QueApetece > nav.QueApetece > ul > li > a:hover{
+  color: #FF0000;
+  text-decoration: underline #FF0000;
+}
+
+.nav_QueApetece > nav.QueApetece > ul > li > a:active{
+  color: blue;
+}
+/* Aqui acaba el menu QUE TE APETECE*/
+
 
   /*se adapta la imagen*/
   header > img {
@@ -156,7 +192,7 @@
   *{box-sizing:border-box;}
 
 form{
-	width:300px;
+	width:500px;
 	padding:16px;
 	border-radius:10px;
 	margin:auto;
@@ -164,14 +200,16 @@ form{
 }
 
 form label{
-	width:72px;
+	width:100%;
 	font-weight:bold;
 	display:inline-block;
 }
 
 form input[type="text"],
+form input[type="number"],
+form input[type="radio"],
 form input[type="email"]{
-	width:180px;
+	width:400px;
 	padding:3px 10px;
 	border:1px solid #f6f6f6;
 	border-radius:3px;
@@ -195,9 +233,21 @@ form input[type="submit"]:hover{
 	cursor:pointer;
 }
 
+
+form .botons{
+  width: 100%;
+  background: #1f53c5;
+  border: none;
+  padding: 15px;
+  color: white;
+  margin: 15px 0;
+  font-size: 15px;
+}
+
+
 textarea{
 	width:100%;
-	height:100px;
+	height:100%;
 	border:1px solid #f6f6f6;
 	border-radius:3px;
 	background-color:#f6f6f6;			
