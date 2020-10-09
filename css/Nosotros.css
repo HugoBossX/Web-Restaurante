@@ -127,7 +127,6 @@
   .container > footer > div.social {
     display:flex;
     justify-content: center;
-    background-color: black;
   }
 
   .container > footer > div.social > button {
