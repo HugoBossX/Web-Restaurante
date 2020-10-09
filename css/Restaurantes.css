@@ -138,6 +138,7 @@
   .container > footer > div.social {
     display:flex;
     justify-content: center;
+    background-color: black;
   }
 
   /*se formatea el button*/
@@ -149,3 +150,5 @@
   .container > footer > div.social > div {
     margin: 0px;
   }
+  
+  
