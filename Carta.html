@@ -5,40 +5,66 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Inicio</title>
-<link rel="stylesheet" type="text/css" id="applicationStylesheet" href="Carta.css"/>
+<link rel="stylesheet" type="text/css" id="applicationStylesheet" href="css/Carta.css"/>
 </head>
 <body>
-    <header>
-		<center><img src="recursos/Enmascarar_grupo_1.png" alt="MDN"></center>
-		<button>Haz tu pedido</button>
-
-	<nav class="menu">
-        <ul>
-            <li><a href="Inicio.html">Inicio</a></li>
-            <li><a href="Carta.html">Carta</a></li>
-            <li><a href="Restaurantes.html">Restaurantes</a></li>
-            <li><a href="Pedido.html">Pedidos</a></li>
-            <li><a href="Nosotros.html">Nosotros</a></li>
-            <li><a href="Reseñas.html">Reseñas</a></li>
-        </ul>
-    </nav>
-    </header>  
-
+    <div class="nav_horizontal">
+		<img src="recursos/Enmascarar_grupo_1.png" alt="Logotipo">
+		<nav class="menu">
+			<ul>
+				<li><a href="Inicio.html">Inicio</a></li>
+				<li><a href="Carta.html">Carta</a></li>
+				<li><a href="Restaurantes.html">Restaurantes</a></li>
+				<li><a href="Pedido.html">Pedidos</a></li>
+				<li><a href="Nosotros.html">Nosotros</a></li>
+				<li><a href="Reseña.html">Reseñas</a></li>
+			</ul>
+		</nav>
+		<div></div>
+	</div> 
     <center><h1>Carta</h1></center>
 </br>
-
    <embed src="recursos/Carta-Terra-Nostra.pdf" type="application/pdf" width="100%" height="600px" />
 
-   <footer>
-    <div class="info"></div>
+   <div class="container">
+    <main class="articulos">
+    </main>
+    <footer>
+    <div class="info">
+        <article>
+            <center>
+            <h2>Horarios</h2>
+            <p>Lunes – Jueves</br>
+            Comida: 1 PM – 4 PM</br>
+            Cena: 8 PM – 11 PM</br>
+            </br>	
+            Viernes – Domingo</br>
+            Comida: 1 PM – 4 PM</br>
+            Cena: 8 PM – 12 AM</p>
+            </center>
+        </article>
+        <article>
+            <center>
+            <h2>direccion</h2>
+            <address>
+                <p>Calle Siete Infantes de Lara, 13</br>
+                    26007 Logroño, La Rioja</br>
+                </br>
+                    Calle Clavijo, 26</br>
+                    26008 Logroño, La Rioja</p>
+            </address>
+            </center>
+        </article>
+    </div>
+   
     <div class="social">
-        <div class="social">
-            <img src="facebook.png" />
-            <img src="gorjeo.png" />
-            <img src="instagram.png" />
+        <div class="iconos_vectoriales">
+           <a href="https://www.facebook.com/TerraNostraPizzeria/"> <img src="recursos/facebook.png" width="50" height="50" /></a>
+           <a href="https://www.instagram.com/terranostra_logrono/"><img src="recursos/instagram.png" width="50" height="50"/></a>
         </div>
         <button>941213822</button>
     </div>
     </footer>
+    </div>
 </body>
 </html>

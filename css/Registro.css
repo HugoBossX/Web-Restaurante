@@ -5,8 +5,67 @@
 }
 
 body{
-    background-image: url('fondo.jpg');
+    background-image: url('recursos/fondo.jpg');
 }
+
+/*para el tamaño del navegador*/
+  /*se formatea la etiqueta h2 y p*/
+  h2,
+  p {
+    margin: 2%;
+  }
+
+/*se crea una cuadricula con 3 columnas*/
+  /*[img][nav][div]*/
+  .nav_horizontal {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /*formateo de la imagen*/
+  .nav_horizontal > img {
+    text-align: left;
+    height: 100%;
+    margin: -8px 0px 10px 0px; /*top, right, bottom, left*/
+  }
+
+  /*formateo de la nav.menu*/
+  .nav_horizontal > nav.menu {
+    border: #9c9c9c 1px solid;
+    margin: -8px 0px 10px 0px; /*top, right, bottom, left*/
+  }
+  
+  /*[li][li][li][li][li][li] -> lista flexionada en horizontal centrado*/
+  .nav_horizontal > nav.menu > ul {
+    display: flex;
+    justify-content: center;
+    list-style:none;
+  }
+
+  /*formateo de los elementos de la lista*/
+  .nav_horizontal > nav.menu > ul > li {
+    text-decoration:none;
+    margin: 0 .75rem;
+    width: 100px;
+  }
+  
+  /*formateo de los enlaces a*/
+  .nav_horizontal > nav.menu > ul > li > a {
+    color: #9c9c9c;
+    text-decoration:none;
+    font-weight: bold;
+  }
+
+   /*formateo de los enlaces a con hover*/
+   .nav_horizontal > nav.menu > ul > li > a:hover{
+    color: #FF0000;
+    text-decoration: underline #FF0000;
+  }
+
+  /*formateo de los enlaces a con active*/
+  .nav_horizontal > nav.menu > ul > li > a:active{
+    color: blue;
+  }
 
 .form-register{
     width: 400px;
