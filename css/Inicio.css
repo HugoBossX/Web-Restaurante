@@ -24,7 +24,6 @@ body {
   height: 55px;
 }
 
-
 .nav_horizontal > nav.menu {
   border: #9c9c9c 1px solid;
 }
@@ -36,29 +35,28 @@ body {
   list-style-type:none;
   padding: 0;
 }
-
+/*formateo de los elementos de la lista*/
 .nav_horizontal > nav.menu > ul > li {
   text-decoration:none;
   margin: 0,90rem;
   width: 120px;
   text-align:center;
 }
-
+/*formateo de los enlaces a*/
 .nav_horizontal > nav.menu > ul > li > a {
   color: #9c9c9c;
   text-decoration:none;
   font-weight: bold;
 }
-
+ /*formateo de los enlaces a con hover*/
 .nav_horizontal > nav.menu > ul > li > a:hover{
   color: #FF0000;
   text-decoration: underline #FF0000;
 }
-
+/*formateo de los enlaces a con active*/
 .nav_horizontal > nav.menu > ul > li > a:active{
   color: blue;
 }
-
 /*se adapta la imagen*/
 header > img {
   max-height:100%;
@@ -81,7 +79,7 @@ header > img {
                       "footer";
 }
 
-/*[article][article] -> se crea una cuadricula con 2 columnasy 3 filas*/
+/*[article][article] -> se crea una cuadricula con 2 columnas y 3 filas*/
 /*[article][article]*/
 /*[article][article]*/
 .container main.articulos {
@@ -131,7 +129,13 @@ footer > div.info > article > h2 {
   text-align: center;
 }
 
-/*[div][button] -> lista flexionada en horizontal centrado*/
+footer > div.info > article > p,
+footer > div.info > article > address > p
+ {
+  text-align: center;
+}
+
+/*[div][button] -> lista flexionada horizontalmente centrado*/
 .container > footer > div.social {
   display:flex;
   justify-content: center;
@@ -146,8 +150,8 @@ footer > div.info > article > h2 {
   border-radius: 5px;
   font-weight: bold;
 }
-
-.container > footer > div.social > .iconos_vectoriales > img{
+/*se adapta la imagen*/
+.container > footer > div.social > .iconos_vectoriales > a > img{
   max-height:100%;
   min-height:5%;
   width:10%;
@@ -164,6 +168,12 @@ footer > div.info > article > h2 {
   .nav_horizontal > img {
     justify-self: center;
   }
+
+  .container main.articulos {
+    display:grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(6, auto);
+  }  
 }
 
 /*para móviles*/
@@ -180,6 +190,7 @@ footer > div.info > article > h2 {
     justify-self: center;
   }
 
+  /*formateo de la nav.menu; top, right, bottom, left*/
   .nav_horizontal > nav.menu {
     border: none;
   }
@@ -192,81 +203,24 @@ footer > div.info > article > h2 {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, auto);
     grid-row-gap: 10px;
-    grid-column: 10px;
+    grid-column-gap: 10px;
     justify-items: center;
   }
 
-  /*[div][button] -> lista flexionada en horizontal centrado*/
-  .container > footer > div.social {
-    display:flex;
-    justify-content: center;
+  /*formateo de los elementos de la lista*/
+  .nav_horizontal > nav.menu > ul > li {
+    border: #9c9c9c 1px solid;
+  }
+  /*formateo de las imagenes de todos elemento de la lista*/
+  .nav_horizontal > nav.menu > ul > li > img.pedido {
+    width:120px;    
+    height:120px;
+    background: url("../recursos/logo.svg");
   }
 
-  /*se formatea el button*/
-  .container > footer > div.social > button {
-    margin-left: 40%;
-  }
-
-  /*para tabletas*/
-  @media screen and (max-width: 768px) {
-    .nav_horizontal {
-      display:grid;
-      grid-template-columns: repeat(1, 1fr);
-      grid-template-rows: repeat(2, auto);
-    }
-
-    .nav_horizontal > img {
-      justify-self: center;
-    }
-  }
-
-  /*para móviles*/
-  @media screen and (max-width: 576px) {
-    .nav_horizontal {
-      display:grid;
-      grid-template-columns: repeat(1, 1fr);
-      grid-template-rows: repeat(2, auto);
-    }
-
-    .nav_horizontal > img {
-      justify-self: center;
-    }
-
-     /*formateo de la nav.menu; top, right, bottom, left*/
-    .nav_horizontal > nav.menu {
-      border: none;
-    }
-
-    /*[li][li][li][li][li][li] -> lista flexionada en horizontal centrado*/
-    .nav_horizontal > nav.menu > ul {
-      display:grid;
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: repeat(3, auto);
-      grid-row-gap: 10px;
-      grid-column: 10px;
-      justify-items: center;
-    }
-
-    /*formateo de los elementos de la lista*/
-    .nav_horizontal > nav.menu > ul > li {
-      border: #9c9c9c 1px solid;
-    }
-    /*formateo de los elementos de la lista*/
-    .nav_horizontal > nav.menu > ul > li > img.pedido {
-      width:120px;    
-      height:120px;
-      background: url("../recursos/logo.svg");
-    }
-
-      /*se adapta la imagen*/
-    .container main.articulos > article > img {
-      width: 100%;
-      max-width: 400px;
-      height: auto;
-    }
+  .container main.articulos {
+    display:grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(6, auto);
   }
 }
-
-
-
-  

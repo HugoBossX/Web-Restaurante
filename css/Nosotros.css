@@ -123,10 +123,17 @@
     text-align: center;
   }
 
+  footer > div.info > article > p,
+  footer > div.info > article > address > p
+  {
+    text-align: center;
+  }
+
   /*[div][button] -> lista flexionada horizontalmente centrado*/
   .container > footer > div.social {
     display:flex;
     justify-content: center;
+    background-color: black;
   }
 
   .container > footer > div.social > button {
@@ -137,8 +144,8 @@
     border-radius: 5px;
     font-weight: bold;
   }
-
-  .container > footer > div.social > .iconos_vectoriales > img{
+  /*se adapta la imagen*/
+  .container > footer > div.social > .iconos_vectoriales > a >img{
     max-height:100%;
     min-height:5%;
     width:10%;
@@ -155,6 +162,12 @@
     .nav_horizontal > img {
       justify-self: center;
     }
+
+    .container main.articulos {
+      display:grid;
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: repeat(6, auto);
+    } 
   }
 
   /*para móviles*/
@@ -183,7 +196,7 @@
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: repeat(3, auto);
       grid-row-gap: 10px;
-      grid-column: 10px;
+      grid-column-gap: 10px;
       justify-items: center;
     }
 
@@ -197,10 +210,10 @@
       background: url("../recursos/logo.svg");
     }
 
-    .container main.articulos > article > img {
-      width: 100%;
-      max-width: 400px;
-      height: auto;
+    .container main.articulos {
+      display:grid;
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: repeat(6, auto);
     }
   } 
   
