@@ -130,8 +130,8 @@
     font-weight: bold;
     border-color: #f30000;
   }
-
-  .container > footer > div.social > .iconos_vectoriales > img{
+  /*se adapta la imagen*/
+  .container > footer > div.social > .iconos_vectoriales > a >img{
     max-height:100%;
     min-height:5%;
     width:10%;
@@ -176,7 +176,7 @@
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: repeat(3, auto);
       grid-row-gap: 10px;
-      grid-column: 10px;
+      grid-column-gap: 10px;
       justify-items: center;
     }
 
@@ -190,9 +190,30 @@
       background: url("../recursos/logo.svg");
     }
 
+    .container main.articulos > div.resenias {
+      border: none;
+    }
+
     .container main.articulos > article > img {
       width: 100%;
       max-width: 400px;
       height: auto;
+    }
+
+    .container main.articulos {
+      display:grid;
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: repeat(2, auto);
+
+      grid-template-areas:"form"
+                          "resenias";
+    }
+
+    .container main.articulos .resenias{
+      grid-area: resenias;
+    }
+
+    .container main.articulos form{
+      grid-area: form;
     }
   }
