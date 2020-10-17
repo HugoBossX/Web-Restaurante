@@ -1,258 +1,275 @@
-  * {
-    box-sizing: border-box;
-    font-family: 'Segoe UI';
-  }
-  
-  h2,
-  p {
-    margin: 2%;
-  }
-  
-  body {
-    background-color: white;
-  }
+* {
+  box-sizing: border-box;
+  font-family: 'Segoe UI';
+}
+
+h2,h3,
+p {
+  margin: 2%;
+  color: black;
+}
 
 
-  /*MENU DE LA BARRA*/
+
+body {
+  background-image: url("../recursos/pizza1.jpg");
+}
+
+
+
+/*MENU DE LA BARRA*/
 /*[img][nav][div] -> se crea una cuadricula con 3 columnas y 1 fila*/
 .nav_horizontal {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin-bottom: 10px;
+display: flex;
+justify-content: space-between;
+align-items: flex-start;
+
+margin-bottom: 10px;
+background-color: white;
 }
 
 .nav_horizontal > img {
-  height: 55px;
+height: 55px;
+background-color: white;
+
 }
 
 /*formateo de la nav.menu; top, right, bottom, left*/
-.nav_horizontal > nav.menu {
-  border: #9c9c9c 1px solid;
-}
+
 
 /*[li][li][li][li][li][li] -> lista flexionada en horizontal centrado*/
 .nav_horizontal > nav.menu > ul {
-  display: flex;
-  justify-content: center;
-  list-style-type:none;
-  padding: 0;
+display: flex;
+justify-content: center;
+list-style-type:none;
+padding: 0;
+background-color: white;
+
 }
 
 /*formateo de los elementos de la lista*/
 .nav_horizontal > nav.menu > ul > li {
-  text-decoration:none;
-  margin: 0,90rem;
-  width: 120px;
-  text-align:center;
+text-decoration:none;
+margin: 0,90rem;
+width: 120px;
+text-align:center;
+background-color: white;
+
 }
 
 /*formateo de los enlaces a*/
 .nav_horizontal > nav.menu > ul > li > a {
-  color: #9c9c9c;
-  text-decoration:none;
-  font-weight: bold;
+color: #9c9c9c;
+text-decoration:none;
+font-weight: bold;
 }
 
- /*formateo de los enlaces a con hover*/
- .nav_horizontal > nav.menu > ul > li > a:hover{
-  color: #FF0000;
-  text-decoration: underline #FF0000;
+/*formateo de los enlaces a con hover*/
+.nav_horizontal > nav.menu > ul > li > a:hover{
+color: #FF0000;
+text-decoration: underline #FF0000;
 }
 
 /*formateo de los enlaces a con active*/
 .nav_horizontal > nav.menu > ul > li > a:active{
-  color: blue;
+color: blue;
+}
+
+/*se adapta la imagen*/
+header > img {
+max-height:100%;
+min-height:20%;
+width:100%;
+}
+
+/*se formatea el div.container*/
+.container {
+  margin: 20px auto;
+  width: 90%;
+  margin-bottom:10px;
+  margin-top:10px;
+  display: grid;
+
 }
 
 
 
-/*menu    QUE TE APETECE*/
-.nav_QueApetece > nav.QueApetece {
-  border: #9c9c9c 1px solid;
+/*Distribución main*/
+.containerGeneral{
+
+display: grid;
+grid-template-rows: 4;
+grid-template-columns: 6;
+grid-template-areas: " . . pedidos pedidos . ."
+                      ". . registro registro . ."
+                      ". .  titulo  . . ."
+                      ". . direccion direccion . .";
+
 }
 
-.nav_QueApetece > nav.QueApetece > ul {
-  display: flex;
-  justify-content: center;
-  list-style-type:none;
-  padding: 0;
+.containerGeneral h2{
+color:white;
 }
 
-.nav_QueApetece > nav.QueApetece > ul > li {
-  text-decoration:none;
-  margin: 0,90rem;
-  width: 120px;
-  text-align:center;
+/*titulo pedidos*/
+header{
+grid-area: pedidos ;
+
 }
 
-.nav_QueApetece > nav.QueApetece > ul > li > a {
-  color: #9c9c9c;
-  text-decoration:none;
-  font-weight: bold;
+
+/*Cuadro ¿Estás registrado? */
+.estasRegistrado{
+grid-area: registro;
+display: grid;
+grid-template-columns:10% 40% 40% 10%;
+grid-template-areas: ". registrado noRegistrado ." ;
+
+
 }
 
-.nav_QueApetece > nav.QueApetece > ul > li > a:hover{
-  color: #FF0000;
-  text-decoration: underline #FF0000;
+.registrado{
+background-color:rgb(255, 255, 255) ;
+grid-area: registrado;
+padding:2em;
 }
 
-.nav_QueApetece > nav.QueApetece > ul > li > a:active{
-  color: blue;
+.registrado p, h3{
+color:black;
 }
-/* Aqui acaba el menu QUE TE APETECE*/
+
+.registrado h2{
+color:black;
+}
 
 
-  /*se adapta la imagen*/
-  header > img {
-    max-height:100%;
-    min-height:20%;
-    width:100%;
-  }
+.noRegistrado{
+background-color: grey;
+grid-area: noRegistrado;
+padding:2em;
+opacity: 90%;
+}
 
-  /*se formatea el div.container*/
-  .container {
-    margin: 20px auto;
-    width: 90%;
-    margin-bottom:10px;
-    margin-top:10px;
-  }
+.noRegistrado h2,p{
+color: white;
+}
+/*estas registrado cuando pasa por encima el ratón*/
+.registrado:hover{
+background-color: #393939ec ;
+}
 
-  /*[article][article] -> se crea una cuadricula con 2 columnas*/
-  /*[article][article]*/
-  /*[article][article]*/
-  .container main.articulos {
-    display:grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-row-gap: 10px;/*para vertical es row*/
-  }
-
-  /*se formatea los articles*/
-  .container main.articulos > article {
-    border: black 1px solid;
-  }
-
-  /*se adapta la imagen*/
-  .container main.articulos > article > img {
-    max-height:100%;
-    min-height:20%;
-    width:100%;
-  }
-
-  /*se formatea el h2*/
-  .container main.articulos > article > h2 {
-    text-align: center;
-  }
-
-  /*se formatea la p*/
-  .container main.articulos > article > p {
-    text-align: justify;
-  }
-
-  .container > footer{
-    margin: 10px 0px 0px 0px;
-  }
-
-  /*[article][article] -> se crea una cuadricula con 2 columnas*/
-  .container > footer > div.info {
-    display:grid;
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  /*se formatea el article*/
-  .container > footer > div.info > article {
-    border: black 1px solid;
-    margin: 0px 0px 10px 0px; /*top, right, bottom, left*/
-  }
-
-  /*Se formatea el h2*/
-  footer > div.info > article > h2 {
-    text-align: center;
-  }
-
-  /*[div][button] -> lista flexionada en horizontal centrado*/
-  .container > footer > div.social {
-    display:flex;
-    justify-content: center;
-  }
-
-  /*se formatea el button*/
-  .container > footer > div.social > button {
-    margin-left: 40%;
-  }
-
-  /*se formatea el div*/
-  .container > footer > div.social > div {
-    margin: 0px;
-  }
+.registrado:hover h2{
+color:rgb(255, 255, 255);
+}
+.registrado:hover h3{
+color:rgb(255, 255, 255);
+}
+.registrado:hover p{
+color:rgb(255, 255, 255);
+}
 
 
-  /*formulario de datos pedido*/
 
-  *{box-sizing:border-box;}
+.noRegistrado:hover{
+
+background-color: #393939ec;
+}
+
+/*Botones rojo-blanco*/
+button{
+background-color:rgb(250, 75, 75);
+border:white;
+border-radius: 10px;
+padding: 0.7em;
+box-shadow:1px 1px rgba(53, 53, 53, 0.817);
+display:block;
+margin: 1em;
+}
+
+button:hover{
+background-color:rgb(205, 56, 56);
+
+}
+
+
+a{
+text-decoration: none;
+color:white;
+}
+
+/*texto centro */
+.titulo_form{
+grid-area: titulo;
+padding-left: 1emS;
+margin:3em;
+}
+
+/*formulario adress*/
+.direccion{
+grid-area: direccion;
+display: grid;
+grid-template-columns: 25% 50% 25%;
+grid-template-areas: ". formulario .";
+margin: 1em;
+opacity: 90%;
+}
 
 form{
-	width:500px;
-	padding:16px;
-	border-radius:10px;
-	margin:auto;
-	background-color:#ccc;
+grid-area: formulario;
+display:flex;
+flex-direction: column;
+align-items: center;
+background: grey;
+padding: 2em;
 }
 
-form label{
-	width:100%;
-	font-weight:bold;
-	display:inline-block;
+form:hover{
+background-color: #393939ec;
 }
 
-form input[type="text"],
-form input[type="number"],
-form input[type="radio"],
-form input[type="email"]{
-	width:400px;
-	padding:3px 10px;
-	border:1px solid #f6f6f6;
-	border-radius:3px;
-	background-color:#f6f6f6;
-	margin:8px 0;
-	display:inline-block;
+.input{
+ padding-bottom: 1em;
+ 
 }
 
-form input[type="submit"]{
-	width:100%;
-	padding:8px 16px;
-	margin-top:32px;
-	border:1px solid #000;
-	border-radius:5px;
-	display:block;
-	color:#fff;
-	background-color:#000;
-} 
+.redondeado{
+border: 1px;
+border-radius: 1em;
+padding: 1em;
+}
 
-form input[type="submit"]:hover{
-	cursor:pointer;
+/*FOOTER*/
+
+.info{
+display: grid;
+background-color: rgb(255, 255, 255);
+grid-template-columns: 50% 50%;
+opacity: 90%;
+
+}
+
+.info p{
+color: black;
 }
 
 
-form .botons{
-  width: 100%;
-  background: #1f53c5;
-  border: none;
-  padding: 15px;
-  color: white;
-  margin: 15px 0;
-  font-size: 15px;
+/*PEGO*/
+
+.rest{
+display: grid;
+grid-template-rows: 50% 50%;
 }
 
+.socials{
+background-color: black;
+display:flex;
+justify-content: space-around;
+margin: 0px;
+padding-top: 1em;
 
-textarea{
-	width:100%;
-	height:100%;
-	border:1px solid #f6f6f6;
-	border-radius:3px;
-	background-color:#f6f6f6;			
-	margin:8px 0;
-	/*resize: vertical | horizontal | none | both*/
-	resize:none;
-	display:block;
+}
+
+.socials > button{
+margin-left: 40%;
+
 }

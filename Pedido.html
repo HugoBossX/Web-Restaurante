@@ -4,10 +4,13 @@
 <meta charset="utf-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Inicio</title>
+<title>Pedido</title>
 <link rel="stylesheet" type="text/css" id="applicationStylesheet" href="css/Pedido.css"/>
 </head>
 <body>
+	<div class="container">
+
+	
 	<div class="nav_horizontal">
 		<img src="recursos/Enmascarar_grupo_1.png" alt="Logotipo">
 		<nav class="menu">
@@ -20,70 +23,99 @@
 				<li><img class="pedido"/><a href="Reseña.html">Reseñas</a></li>
 			</ul>
 		</nav>
-	</div>
-	<div class="conectar">
-		<h2>Pedidos</h2>
-		<button> <a href="InicioSesion.html">Inicio de Sesión</a></button>
-		<button> <a href="Registro.html">Registro</a></button>
-	</div>
-
-	<div class="nav_QueApetece">
-		<nav class="QueApetece">
-			<ul>
-				<li><img class="pedido"/><a href="Pedido.html">Pizza</a></li>
-				<li><img class="pedido"/><a href="Pedido.html">Pasta</a></li>
-				<li><img class="pedido"/><a href="Pedido.html">Hamburgesa</a></li>
-				<li><img class="pedido"/><a href="Pedido.html">Ensalada</a></li>
-				<li><img class="pedido"/><a href="Pedido.html">Postre</a></li>
-				<li><img class="pedido"/><a href="Pedido.html">Bebida</a></li>
-			</ul>
-		</nav>
-	</div>
-
-	<form action="Pedido.html" target="" method="get" name="form-pedido">
-	<h4>Datos del envio</h4>
+	</div><!--nav_horizontal-->
 	
-		<div class="form-group form-group-margin">
-			<label for="name">Nombre</label>
-			<input type="text" name="name" id="name" placeholder="Introduce tu Nombre">
-		</div>
+	<div class="containerGeneral">
+		<div class="header">
+			<h2> </h2>
+		</div><!--header-->
+		<div class="estasRegistrado">
+			
+			<div class="registrado">
+				<h2>¿Estás registrado?</h2>
+				<p>Accede con tus datos y haz tu pedido de una forma mucho más rápida</p>
+				<button> <a href="InicioSesion.html">Accede</a></button>
+				<h3>¿Aún no lo estás?</h3>
+				<button> <a href="Registro.html">Regístrate</a></button>
+			</div><!--registrado-->
+			<div class="noRegistrado">
+				<h2>Haz tu pedido sin registrarte</h2>
+				<p>Si no quieres registrarte no hay problema, puedes hacer un pedido</p>
+				<button> <a href="Carta.html">Para recoger</a></button>
+				<button> <a href="#direccion">A domicilio</a></button>
+			</div><!--noRegistrado-->
+		</div><!--estasRegistrado-->
+	
+		<div class="titulo_form">
+			<h2>Añade tus datos para que podamos llevarte el pedido a casa: </h2>
+		</div><!--titul_form-->
 
-		<div class="form-group form-group-margin">
-			<label for="direccion">Dirección</label>
-			<input type="text" name="direccion" id="direccion"placeholder="Introduce la dirección">
-		</div>
-
-		<div class="form-group form-group-margin">
-			<label for="portal">Portal</label>
-			<input type="number" name="portal" id="portal" placeholder="Introduce el nº del portal">
-		</div>
-
-		<div class="form-group form-group-margin">
-			<label for="puerta">Puerta</label>
-			<input type="text" name="puerta" id="puerta" placeholder="Introduce el nº de puerta">
-		</div>
-		</br>
-			<label for="domicilio">a Domicilio</label> <input type="radio" id="domicilio" value="domicilio">
-		</br>
-			<label for="restaurante">En el Restaurante</label>  <input type="radio" id="restaurante" value="restaurante">
-		</br>
+		<div class="direccion" >
+			
+			
+			<form action="seleccionaPedido.html" method="get">
+				<div class="input">
+					<input class="redondeado" type="text" name="nombre" placeholder="NOMBRE">
+				</div>
+				<div class="input">
+					<input class="redondeado" type="text" name="apellido" placeholder="APELLIDOS">
+				</div>
+				<div class="input">
+					<input class="redondeado" type="text" name="direccion" placeholder="DIRECCIÓN">
+				</div>
+				<div class="input">
+					<input class="redondeado" type="text" name="ciudad" placeholder="CIUDAD">
+				</div>
+				<div class="input">
+					<input class="redondeado" type="text" name="codigo" placeholder="CÓDIGO POSTAL">
+				</div>
+				<div class="input">
+					<button type="submit">
+						<a href="Carta.html">ENVIAR</a>
+					</button>
+				</div>
+			</form>
 		
-		<div class="no-mobile-padding-lr">
-			<button  class="botons" id="submit-form-button" class="btn btn-sm btn-success center margin-bottom-15 no-border" type="submit"> Hacer pedido</button>
-		</div>
+		</div><!--formulario direccion-->
+	
+	</div><!--containerGeneral-->
+	
+	
+		<div class="info">
+			<div class="horario">
+				<h2>Horarios</h2>
+				<p>Lunes – Jueves</p>
+				<p>1 PM – 4 PM / 8 PM – 11 PM</p>
+				
+				<p>Viernes – Domingo</p>
+				<p> 1 PM – 4 PM / 8 PM – 12 AM</p>
+				
+			</div>
+			<div class="rest">
+				<div class="dir1" >
+					<h2>Terra Nostra 7 Infantes</h2>
+					<p>Calle Siete Infantes de Lara,13 26007 Logroño, La Rioja</p>
+				</div><!--dir1-->
+				<div class="dir2" >
+					<h2>Terra Nostra Clavijo</h2>
+					<p> Calle Clavijo, 26 26008 Logroño, La Rioja</p>
+				</div><!--dir2-->
+			</div><!--rest-->
+		</div><!--info-->
 
-	</form>
-
-		
-	<footer>
-		<div class="social">
+		<div class="socials">
 			<div class="iconos_vectoriales">
 				<a href="https://www.facebook.com/TerraNostraPizzeria/"> <img src="recursos/facebook.png" width="50" height="50" /></a>
 				<a href="https://www.instagram.com/terranostra_logrono/"><img src="recursos/instagram.png" width="50" height="50"/></a>
 			</div>
-			<button>941213822</button>
+			<div>
+				<button>941213822</button>
+			</div>
+			
 		</div>
-	</footer>
+		
+	
+	
 </div>
 
 </body>
