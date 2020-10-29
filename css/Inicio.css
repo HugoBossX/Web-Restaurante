@@ -212,7 +212,7 @@ footer > div.info > article > address > p
     border: #9c9c9c 1px solid;
   }
   /*formateo de las imagenes de todos elemento de la lista*/
-  .nav_horizontal > nav.menu > ul > li > img.pedido {
+  .nav_horizontal > nav.menu > ul > li > p.pedido {
     width:120px;    
     height:120px;
     background: url("../recursos/logo.svg");
